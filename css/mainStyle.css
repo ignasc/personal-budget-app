@@ -1,0 +1,171 @@
+/*
+Flexbox guide
+https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
+
+*/
+
+
+body * {
+  border: 1px solid black;
+}
+/*-------- STYLE FOR MAIN APP FRAME--------*/
+.app-frame {
+	max-width: 800px; /*maximum app width*/
+	margin: auto; /*neat way to center the whole app within browser window*/
+	
+	display:flex;
+	flex-direction: column; /*main axis as vertical and cross axis as horizontal*/
+	align-items: stretch; /*align child elements along the cross axis*/
+	gap: 10px; /*add a gap between child elements*/
+}
+.app-frame > * {
+	border: 1px solid grey;
+	display: flex;
+	flex-direction: column;
+	align-items: center; /*align child items along the cross axis*/
+	gap: 10px; /*add a gap between titles and elements*/
+}
+/*-------- STYLE FOR BUDGED ALLOCATION --------*/
+#biudzetas-suvestine {
+	
+}
+#biudzetas-suvestine > div{
+	display: flex; /*set elements itself display mode*/
+	align-self: stretch; /*align the element itself*/
+	justify-content: center; /*align the child elements*/
+	flex-direction: row;
+	gap: 30px; /*gap between child elements*/
+}
+/*-------- STYLE FOR EXPENSES SUMMARY LIST--------*/
+#islaidos-grupes {
+	
+}
+#islaidos-grupes > ul {
+	display: flex;
+	gap: 10px;
+	
+}
+/*-------- STYLE FOR EXPENSES LIST --------*/
+#islaidos-sarasas {
+	border:1px solid blue;
+}
+#islaidos-sarasas > ul {
+	display: flex;
+	border: 1px solid red;
+	flex-direction: column;
+	align-self: stretch; /*stretch the ul element to full width*/
+	gap: 10px;
+	
+}
+#islaidos-sarasas > ul > li{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between; /*align items along the main axis*/
+	align-items: center; /*align items along the cross axis*/
+	height: 1.5em;
+	border: 1px solid green;
+}
+#islaidos-sarasas > ul > li > *{/*each li elements contains separate elements for description, sum and button to remove this item*/
+	flex-basis: 0;/*if this is not set to 0, then flex-grow acts weird with elements below - READ ABOUT THIS ONE MORE*/
+	
+}
+#islaidos-sarasas > ul > li > p{
+	flex-grow:6;
+}
+#islaidos-sarasas > ul > li > div{
+	flex-grow:2;
+}
+#islaidos-sarasas > ul > li > button{
+	flex-grow:1;
+}
+/*-------- STYLE FOR FORM SUBMITION (NEW EXPENSE)--------*/
+form {
+	
+}
+
+
+/*
+.flex-container {
+	display: flex;
+}
+
+.flex-gap { /*to add a small gap between elements within a flexbox*
+	gap: 10px;
+}
+
+#app-frame {
+	min-width: 300px; /*absolute minimum width of the app*
+	max-width: 1000px; /*Let's keep the app within certain max width too*
+}
+
+#biudzetas-suvestine {
+	height: 2em; /*height of the container itself*
+	justify-content: center; /*align items along the main axis*
+	align-items: center; /*align items along the cross axis*
+}
+
+.biudzeto-irasas {
+	padding: 0.1em;
+}
+
+#islaidos-sarasas > ul {
+	flex-direction: column;
+}
+#islaidos-sarasas > ul > li{/*general properties for every item in the list element li*
+	height:2em;
+	flex-direction:row;
+	justify-content: center; /*align items within li element along main axis*
+	align-items: center; /*align items within li element along the cross axis*
+	border: 1px solid red;
+}
+
+form {/*DEBUG: delete later*
+	border: 1px solid yellow;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+.form-element {/*general styles for every element within <form>*
+	flex-grow:1;
+	gap: 20px;
+}
+
+button {
+	flex-grow: 0;
+	flex-basis: 10px;
+}*/
+
+
+/*Commented out and left for future use.*/
+/* Anything smaller than the ones below (320px and below) *
+@media only screen and (max-width: 20em) {
+	
+	.flex-container {
+	display: block;
+	}
+
+}
+
+/* Small devices such as large phones (640px and up) *
+@media only screen and (min-width: 40em) {
+
+}
+
+/* Medium devices such as tablets (768px and up) *
+@media only screen and (min-width: 48em) {
+	
+	#app-frame {
+		max-width: 700px
+	}
+
+}
+
+/* Large devices such as laptops (1024px and up) *
+@media only screen and (min-width: 64em) {
+
+}
+
+/* Largest devices such as desktops (1280px and up) *
+@media only screen and (min-width: 80em) {
+
+}*/
