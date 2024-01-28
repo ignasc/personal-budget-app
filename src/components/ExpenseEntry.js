@@ -4,15 +4,9 @@ function ExpenseEntry(props) {
         <p>{props.fieldName}:</p>
         <div>{props.fieldValue} {props.fieldCurrency}</div>
         
-        <RemoveButton />
-    </li>
+        <button>Remove</button>
+      </li>
     );
   }
-
-function RemoveButton(){
-    return(
-        <button>Remove</button>
-    );
-}
   
   export default ExpenseEntry;
