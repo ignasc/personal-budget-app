@@ -10,3 +10,4 @@ function ExpenseEntry(props) {
   }
   
   export default ExpenseEntry;
+  
