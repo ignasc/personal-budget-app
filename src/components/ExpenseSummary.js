@@ -1,9 +1,13 @@
 import {expenseSummary} from './temp/DataForTest';
+import { budgetTypes } from './temp/DataForTest';
 
-function ExpenseSummary(){
-  var listItems = expenseSummary.map( (item, index) =>{
+function ExpenseSummary(props){
+  //console.log("islaidu suvestine:")
+  //console.log(props.expenseSummary)
+  let listOfCategories = Object.keys(props.expenseSummary)
+  var listItems = listOfCategories.map( (item, index) =>{
     return (
-      <li key={index}>{item.name}: {item.sum} {item.currency}</li>
+      <li key={index}>{props.expenseSummary[item].name}: {props.expenseSummary[item].sum} {props.expenseSummary[item].currency}</li>
     )
   } );
 
