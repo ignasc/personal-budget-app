@@ -23,7 +23,7 @@ function AddNewExpense(props) {
   var listOfCategories = Object.keys(budgetTypes);
   var listItems = listOfCategories.map( (item, index) =>{
       return (
-      <option key={index} value={budgetTypes[item].name}>{budgetTypes[item].name}</option>
+      <option key={index} value={item}>{budgetTypes[item].name}</option>
       )
   });
 

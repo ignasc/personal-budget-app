@@ -27,12 +27,37 @@ function App() {
     //This loop is temporary (and dirty), to sum up the current list of expenses that are used for test purposes
     for (let index = 0; index < expenses.length; index++) {
       const element = expenses[index];
-      let key = listOfCategories.find(key => budgetTypes[key].name == element.category)
-      console.log("expenseList")
+      let key = listOfCategories.find(key => key == element.category)
       expenseList[key].sum = expenseList[key].sum + element.sum
     }
     return expenseList
   })
+  //CALCULATE EXPENSE SUMMARY
+  function updateExpense(expenses){
+    //Let's create an initial expense summary list
+    let newExpenseSummary = {};
+    let listOfCategories = Object.keys(budgetTypes);
+    for (let index = 0; index < listOfCategories.length; index++) {
+      const element = listOfCategories[index];
+      newExpenseSummary[element] = {
+        sum: 0,
+        currency: "Lt",
+        name: budgetTypes[element].name
+      }
+    }
+
+    //First check if there are any expenses
+    if (expenses.length !== 0) {
+      //Loop through existing expense list and add up all expenses
+      for (let index = 0; index < expenses.length; index++) {
+        const category = expenses[index].category;
+        const sum = expenses[index].sum;
+        newExpenseSummary[category].sum = newExpenseSummary[category].sum + sum;
+      }
+    }
+
+    setExpenseSummary(newExpenseSummary)
+  };
   //REMOVE EXPENSE
   function removeExpense(keyId){
     setIslaidos(()=>{
@@ -43,6 +68,7 @@ function App() {
           updatedList.push(element);
         };
       };
+    updateExpense(updatedList)
     return updatedList;
     })
   };
@@ -53,6 +79,7 @@ function App() {
       newExpenseObject
     ]
     setIslaidos(newExpenseList)
+    updateExpense(newExpenseList)
   };
 
   return (

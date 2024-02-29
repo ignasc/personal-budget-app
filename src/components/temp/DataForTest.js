@@ -1,9 +1,9 @@
 export const expenses = [
-    {category: "Mokesciai", name: "Expense No.1", sum: 50, currency: "Lt"},
-    {category: "Maistas", name: "Expense No.2", sum: 500, currency: "Lt"},
-    {category: "Laisvalaikis", name: "Expense No.3", sum: 50444, currency: "Lt"},
-    {category: "Kitos islaidos", name: "Expense No.4", sum: 5, currency: "Lt"},
-    {category: "Mokesciai", name: "Expense No.5", sum: 55.6, currency: "Lt"}
+    {category: "mokesciai", name: "Expense No.1", sum: 50, currency: "Lt"},
+    {category: "maistas", name: "Expense No.2", sum: 500, currency: "Lt"},
+    {category: "laisvalaikis", name: "Expense No.3", sum: 50444, currency: "Lt"},
+    {category: "kitos", name: "Expense No.4", sum: 15, currency: "Lt"},
+    {category: "mokesciai", name: "Expense No.5", sum: 55.6, currency: "Lt"}
 ];
 
 export const expenseSummary = [
@@ -21,8 +21,8 @@ const expenseSummary1 = {
 }
 
 export const budgetTypes = {
-    mokesciai: {name: "Mokesciai"},
-    maistas: {name: "Maistas"},
-    laisvalaikis: {name: "Laisvalaikis"},
-    kitos: {name: "Kitos islaidos"}
+    mokesciai: {name: "Mokesciai", categoryID: "1"},
+    maistas: {name: "Maistas", categoryID: "2"},
+    laisvalaikis: {name: "Laisvalaikis", categoryID: "3"},
+    kitos: {name: "Kitos islaidos", categoryID: "4"}
 }
