@@ -1,9 +1,4 @@
-import {expenseSummary} from './temp/DataForTest';
-import { budgetTypes } from './temp/DataForTest';
-
 function ExpenseSummary(props){
-  //console.log("islaidu suvestine:")
-  //console.log(props.expenseSummary)
   let listOfCategories = Object.keys(props.expenseSummary)
   var listItems = listOfCategories.map( (item, index) =>{
     return (
