@@ -85,7 +85,7 @@ function App() {
     <div className="container">
       
       <AppTitle title={'Budget summary'}/>
-      
+
       <BudgetSummary expenses={ islaidos } />
       
       <AppTitle title={'Expense summary'}/>

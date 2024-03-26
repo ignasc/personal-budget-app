@@ -1,9 +1,9 @@
 export const expenses = [
     {category: "mokesciai", name: "Water", sum: 50, currency: "Lt"},
     {category: "maistas", name: "Weekly food", sum: 500, currency: "Lt"},
-    {category: "laisvalaikis", name: "Party time!", sum: 50444, currency: "Lt"},
+    {category: "laisvalaikis", name: "Party time!", sum: 505, currency: "Lt"},
     {category: "kitos", name: "Cinema", sum: 15, currency: "Lt"},
-    {category: "mokesciai", name: "Electricity", sum: 55.6, currency: "Lt"}
+    {category: "mokesciai", name: "Electricity", sum: 55, currency: "Lt"}
 ];
 
 export const expenseSummary = [
