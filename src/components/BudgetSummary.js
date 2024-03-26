@@ -12,13 +12,13 @@ function BudgetSummary(props){
     remainingBudget = totalBudget - usedBudget;
 
   return(
-    <>
-        <div className="biudzeto-irasas">Budget: {totalBudget} {currency}</div>
+    <div className="row">
+        <div className="biudzeto-irasas col-4">Budget: {totalBudget} {currency}</div>
 
-        <div className="biudzeto-irasas">Used budget: {usedBudget} {currency}</div>
+        <div className="biudzeto-irasas col-4">Used budget: {usedBudget} {currency}</div>
 
-        <div className="biudzeto-irasas">Remaining budget: {remainingBudget} {currency}</div>
-    </>
+        <div className="biudzeto-irasas col-4">Remaining budget: {remainingBudget} {currency}</div>
+    </div>
   );
 }
 

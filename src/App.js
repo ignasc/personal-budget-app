@@ -74,37 +74,31 @@ function App() {
   //ADD EXPENSE
   function AddNewExpenseToList(newExpenseObject){
     let newExpenseList = [
-      ...islaidos,
-      newExpenseObject
+      newExpenseObject,
+      ...islaidos
     ]
     setIslaidos(newExpenseList)
     updateExpense(newExpenseList)
   };
 
   return (
-    <div className="app-frame">
-      <div id="biudzetas-suvestine" className="flex-container flex-gap">
-        <AppTitle title={'Budget summary'}/>
-        <div>
-          <BudgetSummary expenses={ islaidos } />
-        </div>
-      </div>
+    <div className="container">
       
-      <div id="islaidos-grupes">
-        <AppTitle title={'Expense summary'}/>
+      <AppTitle title={'Budget summary'}/>
+      
+      <BudgetSummary expenses={ islaidos } />
+      
+      <AppTitle title={'Expense summary'}/>
 
-        <ExpenseSummary islaidos={ islaidos } expenseSummary={ expenseSummary }/>
-      </div>
+      <ExpenseSummary islaidos={ islaidos } expenseSummary={ expenseSummary }/>
       
+      <AppTitle title={'Add new expense'}/>
+
       <AddNewExpense addExpense={ AddNewExpenseToList } expenseList={islaidos}/>
       
-      <div id="islaidos-sarasas">
+      <AppTitle title={'List of expenses'}/>
 
-        <AppTitle title={'List of expenses'}/>
-
-        <ExpenseTable removeExpense={ removeExpense } expenseList={islaidos} budgetTypes={ budgetTypes }/>
-
-      </div>
+      <ExpenseTable removeExpense={ removeExpense } expenseList={islaidos} budgetTypes={ budgetTypes }/>
 
     </div>
   );
