@@ -24,26 +24,26 @@ function AddNewExpense(props) {
   });
 
   return (
-    <form onSubmit={handleSubmit} method="get" id="islaidos-naujas-irasas" className="row">
+    <form onSubmit={handleSubmit} method="get" id="islaidos-naujas-irasas" className="row p-3">
 
-    <div  className="row">
-      <label htmlFor="operacija-prideti" className='col-3 offset-3'>Expense type: </label>
-      <select form="islaidos-naujas-irasas" name="islaidu-tipas" id="islaidu-tipai" className='col-2' required>
+    <div  className="row g-0">
+      <label htmlFor="operacija-prideti" className='p-1 col col-xs-3 offset-xs-4  border border-secondary-subtle'>Expense type: </label>
+      <select form="islaidos-naujas-irasas" name="islaidu-tipas" id="islaidu-tipai" className='col col-xs-2' required>
         {listItems}
       </select>
     </div>
     
-    <div  className="row">
-      <label htmlFor="islaidos-aprasymas" className='col-3 offset-3'>Expense description: </label>
-      <input type="text" form="islaidos-naujas-irasas" id="islaidos-aprasymas" name="islaidu-aprasymas" className='col-2' required></input>
+    <div  className="row g-0">
+      <label htmlFor="islaidos-aprasymas" className='p-1 col col-xs-3 offset-xs-4 border border-secondary-subtle'>Expense description: </label>
+      <input type="text" form="islaidos-naujas-irasas" id="islaidos-aprasymas" name="islaidu-aprasymas" className='col col-xs-2' required></input>
     </div>
     
-    <div  className="row">
-      <label htmlFor="islaidos-aprasymas" className='col-3 offset-3'>Expense sum: </label>
-      <input type="number" form="islaidos-naujas-irasas" id="islaidos-suma" name="islaidu-suma" min="0" className='col-2' required></input>
+    <div  className="row g-0">
+      <label htmlFor="islaidos-aprasymas" className='p-1 col col-xs-3 offset-xs-4 border border-secondary-subtle'>Expense sum: </label>
+      <input type="number" form="islaidos-naujas-irasas" id="islaidos-suma" name="islaidu-suma" min="0" className='col col-xs-2' required></input>
     </div>
     
-    <button type="submit" form="islaidos-naujas-irasas"  className="col-2 offset-5 btn btn-primary">Add new expense</button>
+    <button type="submit" form="islaidos-naujas-irasas"  className="col col-xs-2 offset-xs-5 btn btn-primary">Add new expense</button>
   </form>
     
   );

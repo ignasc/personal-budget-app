@@ -87,15 +87,15 @@ function App() {
       <AppTitle title={'Budget summary'}/>
 
       <BudgetSummary expenses={ islaidos } />
-      
+      <hr/>
       <AppTitle title={'Expense summary'}/>
 
       <ExpenseSummary islaidos={ islaidos } expenseSummary={ expenseSummary }/>
-      
+      <hr/>
       <AppTitle title={'Add new expense'}/>
 
       <AddNewExpense addExpense={ AddNewExpenseToList } expenseList={islaidos}/>
-      
+      <hr/>
       <AppTitle title={'List of expenses'}/>
 
       <ExpenseTable removeExpense={ removeExpense } expenseList={islaidos} budgetTypes={ budgetTypes }/>
