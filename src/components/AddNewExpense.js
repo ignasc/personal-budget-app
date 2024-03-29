@@ -43,7 +43,7 @@ function AddNewExpense(props) {
       <input type="number" form="islaidos-naujas-irasas" id="islaidos-suma" name="islaidu-suma" min="0" className='col col-xs-2' required></input>
     </div>
     
-    <button type="submit" form="islaidos-naujas-irasas"  className="col col-xs-2 offset-xs-5 btn btn-primary">Add new expense</button>
+    <button type="submit" form="islaidos-naujas-irasas"  className="col col-xs-2 offset-xs-5 btn btn-primary mt-2">Add new expense</button>
   </form>
     
   );

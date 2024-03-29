@@ -82,7 +82,7 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="container col-lg-10 border border-secondary-subtle" style={{maxWidth: 800 + 'px'}}>
       
       <AppTitle title={'Budget summary'}/>
 
