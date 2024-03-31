@@ -19,7 +19,7 @@ function App() {
       const element = listOfCategories[index];
       expenseList[element] = {
         sum: 0,
-        currency: "Lt",
+        currency: "£",
         name: budgetTypes[element].name
       }
     }
@@ -40,7 +40,7 @@ function App() {
       const element = listOfCategories[index];
       newExpenseSummary[element] = {
         sum: 0,
-        currency: "Lt",
+        currency: "£",
         name: budgetTypes[element].name
       }
     }

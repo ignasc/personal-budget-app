@@ -10,7 +10,7 @@ function AddNewExpense(props) {
       name: form["islaidu-aprasymas"].value,
       sum: Number(form["islaidu-suma"].value),
       category: form["islaidu-tipas"].value,
-      currency: "Lt"
+      currency: "£"
     }
 
     props.addExpense(newExpense)

@@ -1,16 +1,16 @@
 export const expenses = [
-    {category: "mokesciai", name: "Water", sum: 50, currency: "Lt"},
-    {category: "maistas", name: "Weekly food", sum: 500, currency: "Lt"},
-    {category: "laisvalaikis", name: "Party time!", sum: 505, currency: "Lt"},
-    {category: "kitos", name: "Cinema", sum: 15, currency: "Lt"},
-    {category: "mokesciai", name: "Electricity", sum: 55, currency: "Lt"}
+    {category: "mokesciai", name: "Water", sum: 50, currency: "£"},
+    {category: "maistas", name: "Weekly food", sum: 500, currency: "£"},
+    {category: "laisvalaikis", name: "Party time!", sum: 505, currency: "£"},
+    {category: "kitos", name: "Cinema", sum: 15, currency: "£"},
+    {category: "mokesciai", name: "Electricity", sum: 55, currency: "£"}
 ];
 
 export const expenseSummary = [
-    {name: "Bills", sum: 0, currency: "Lt"},
-    {name: "Food", sum: 0, currency: "Lt"},
-    {name: "Entertainment", sum: 0, currency: "Lt"},
-    {name: "Other", sum: 0, currency: "Lt"}
+    {name: "Bills", sum: 0, currency: "£"},
+    {name: "Food", sum: 0, currency: "£"},
+    {name: "Entertainment", sum: 0, currency: "£"},
+    {name: "Other", sum: 0, currency: "£"}
 ];
 
 export const budgetTypes = {

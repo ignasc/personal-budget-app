@@ -2,7 +2,7 @@ function BudgetSummary(props){
     let totalBudget = 2000;
     let usedBudget = 0;
     let remainingBudget = 0;
-    let currency = "Lt";
+    let currency = "£";
     //Colours
     let lowBudgetWarning = "text-bg-warning p-2 m-1";
     let overBudgedWarning = "text-bg-danger p-2 m-1";
@@ -24,11 +24,11 @@ function BudgetSummary(props){
 
   return(
     <div className={"row d-flex align-items-center text-center " + budgetColour}>
-        <div className="biudzeto-irasas col-sm-4">Budget: {totalBudget} {currency}</div>
+        <div className="biudzeto-irasas col-sm-4">Budget: {currency}{totalBudget}</div>
 
-        <div className="biudzeto-irasas col-sm-4">Used budget: {usedBudget} {currency}</div>
+        <div className="biudzeto-irasas col-sm-4">Used budget: {currency}{usedBudget}</div>
 
-        <div className="biudzeto-irasas col-sm-4">Remaining budget: {remainingBudget} {currency}</div>
+        <div className="biudzeto-irasas col-sm-4">Remaining budget: {currency}{remainingBudget}</div>
     </div>
   );
 }
