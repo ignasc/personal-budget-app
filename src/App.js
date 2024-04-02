@@ -4,9 +4,9 @@ import ExpenseTable from './components/ExpenseTable';
 import ExpenseSummary from './components/ExpenseSummary.js';
 import AddNewExpense from './components/AddNewExpense.js';
 import BudgetSummary from './components/BudgetSummary.js';
-import { budgetTypes } from './components/temp/DataForTest';
+import { budgetTypes } from './components/constants/InitialVariables.js';
 //Expense list state
-import { expenses } from './components/temp/DataForTest.js';
+import { expenses } from './components/constants/InitialVariables.js';
 import { useState } from 'react';
 
 function App() {
@@ -94,11 +94,11 @@ function App() {
       <hr/>
       <AppTitle title={'Add new expense'}/>
 
-      <AddNewExpense addExpense={ AddNewExpenseToList } expenseList={islaidos}/>
+      <AddNewExpense addExpense={ AddNewExpenseToList } expenseList={ islaidos }/>
       <hr/>
       <AppTitle title={'List of expenses'}/>
 
-      <ExpenseTable removeExpense={ removeExpense } expenseList={islaidos} budgetTypes={ budgetTypes }/>
+      <ExpenseTable removeExpense={ removeExpense } expenseList={ islaidos } budgetTypes={ budgetTypes }/>
 
     </div>
   );

@@ -24,11 +24,11 @@ function BudgetSummary(props){
 
   return(
     <div className={"row d-flex align-items-center text-center " + budgetColour}>
-        <div className="biudzeto-irasas col-sm-4">Budget: {currency}{totalBudget}</div>
+        <div className="col-sm-4">Budget: {currency}{totalBudget}</div>
 
-        <div className="biudzeto-irasas col-sm-4">Used budget: {currency}{usedBudget}</div>
+        <div className="col-sm-4">Used budget: {currency}{usedBudget}</div>
 
-        <div className="biudzeto-irasas col-sm-4">Remaining budget: {currency}{remainingBudget}</div>
+        <div className="col-sm-4">Remaining budget: {currency}{remainingBudget}</div>
     </div>
   );
 }
