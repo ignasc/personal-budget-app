@@ -2,6 +2,8 @@
 
 A personal budget app that lets you plan your budget. Work in progress.
 
+Second project that was done after learning the basics of React framework. Most of the initial setup was done following tutorials, documentations and focus was more directed towards working on the logic of the app.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
